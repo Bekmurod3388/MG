@@ -18,6 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/test', function() {
-    return "Javob";
-});
+Route::post('/store',[\App\Http\Controllers\Api\SensorController::class,'store'])->name('store');
+Route::get('/switch',[\App\Http\Controllers\Api\SensorController::class,'switch'])->name('switch');
