@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/power', [\App\Http\Controllers\SensorController::class,'power_index'])->name('power');
+Route::get('/power', [\App\Http\Controllers\SensorController::class,'power_index'])->name('power');
