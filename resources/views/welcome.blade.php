@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
             <!-- Container Fluid-->
+            <div id="mydiv">
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -124,8 +125,14 @@
             </div>
             <!---Container Fluid-->
         </div>
-
+</div>
             @endsection
 @section('script')
+<script>
 
+    setInterval(function(){
+        $('#mydiv').load(document.URL+'{{url("welcome")}}', function() {
+  alert( "yuklandi");
+    }, 2000);
+</script>
 @endsection

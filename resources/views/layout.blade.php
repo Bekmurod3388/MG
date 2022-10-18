@@ -130,6 +130,8 @@
     <script src="js/ruang-admin.min.js"></script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    @yield('script')
 </body>
 
 </html>
