@@ -16,7 +16,6 @@ use Illuminate\Http\Request;
 class SensorController extends Controller
 {
     public function store(Request $request){
-        dd($request->all());
         $power = Power::first();
         if($power->sensor1 == 1){
             Sensor1::create([
