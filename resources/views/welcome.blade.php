@@ -14,7 +14,7 @@
                                 <div class="row align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Harakat sensor 1</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor1->value}}</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor1}}</div>
                                         <div class="mt-2 mb-0 text-muted text-xs">
                                         </div>
                                     </div>
@@ -32,7 +32,7 @@
                                 <div class="row align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Harakat sensor 2</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor2->value}}</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor2}}</div>
                                         <div class="mt-2 mb-0 text-muted text-xs">
                                         </div>
                                     </div>
@@ -50,7 +50,7 @@
                                 <div class="row align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Eshik sensor 1</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor3->}}</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor3}}</div>
                                         <div class="mt-2 mb-0 text-muted text-xs">
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                 <div class="row align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-uppercase mb-1">Eshik sensor 2</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor4->value}}</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$sensor4}}</div>
                                         <div class="mt-2 mb-0 text-muted text-xs">
                                         </div>
                                     </div>
