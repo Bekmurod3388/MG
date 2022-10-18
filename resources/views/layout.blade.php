@@ -18,7 +18,7 @@
 <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('welcome')}}">
             <div class="sidebar-brand-icon">
                 <img src="">
             </div>
@@ -26,7 +26,7 @@
         </a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item active">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('welcome')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -41,7 +41,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('power')}}">
+            <a class="nav-link collapsed" href="{{route('power_index')}}">
                 <i class="far fa-fw fa-window-maximize"></i>
                 <span>Power</span>
             </a>

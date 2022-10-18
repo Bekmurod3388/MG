@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dish;
 use App\Models\Power;
 use App\Models\Sensor;
+use App\Models\Sensor1;
+use App\Models\Sensor2;
+use App\Models\Sensor3;
+use App\Models\Sensor4;
+use App\Models\Sensor5;
+use App\Models\Sensor6;
 use Illuminate\Http\Request;
 
 class SensorController extends Controller
@@ -11,11 +18,23 @@ class SensorController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        //
+        $sensor1 = Sensor1::first();
+        $sensor2 = Sensor2::first();
+        $sensor3 = Sensor3::first();
+        $sensor4 = Sensor4::first();
+        $sensor5 = Sensor5::first();
+        $sensor6 = Sensor6::first();
+        return view('welcome',[
+            'sensor1'=>$sensor1,
+            'sensor2'=>$sensor2,
+            'sensor3'=>$sensor3,
+            'sensor4'=>$sensor4,
+            'sensor5'=>$sensor5,
+            'sensor6'=>$sensor6]);
     }
 
     /**
@@ -83,35 +102,78 @@ class SensorController extends Controller
     {
         //
     }
-    public function power(Request $request){
 
-        if(isset($request->sensor1)){
-            if ($request->sensor1 == 0){
-                Power::update(['sensor1'=>0]);
+    public function power(Request $request,Power $power){
+        //dd($request->all());
+            if (isset($request->sensor1)) {
+                if ($power->sensor1 === 0) {
+                    $power->update([
+                        'sensor1' => 1
+                    ]);
+                } else {
+                    $power->update([
+                        'sensor1' => 0
+                    ]);
+                }
             }
-            else Power::update(['sensor1'=>1]);
+        if (isset($request->sensor2)) {
+            if ($power->sensor2 === 0) {
+                $power->update([
+                    'sensor2' => 1
+                ]);
+            } else {
+                $power->update([
+                    'sensor2' => 0
+                ]);
+            }
         }
-        if(isset($request->sensor2)){
-            if ($request->sensor2 == 0){
-            Power::update(['sensor2'=>$request->sensor2]);
-        }}
-        if(isset($request->sensor3)){
-            if ($request->sensor3 == 0){
-            Power::update(['sensor3'=>$request->sensor3]);
-        }}
-        if(isset($request->sensor4)){
-            if ($request->sensor4 == 0){
-            Power::update(['sensor4'=>$request->sensor4]);
-        }}
-        if(isset($request->sensor5)){
-            if ($request->sensor5 == 0){
-            Power::update(['sensor5'=>$request->sensor5]);
-        }}
-        if(isset($request->sensor6)){
-            if ($request->sensor6 == 0) {
-            Power::update(['sensor6' => $request->sensor6]);
-        }}
+        if (isset($request->sensor3)) {
+            if ($power->sensor3 === 0) {
+                $power->update([
+                    'sensor3' => 1
+                ]);
+            } else {
+                $power->update([
+                    'sensor3' => 0
+                ]);
+            }
+        }
+        if (isset($request->sensor4)) {
+            if ($power->sensor4 === 0) {
+                $power->update([
+                    'sensor4' => 1
+                ]);
+            } else {
+                $power->update([
+                    'sensor4' => 0
+                ]);
+            }
+        }
+        if (isset($request->sensor5)) {
+            if ($power->sensor5 === 0) {
+                $power->update([
+                    'sensor5' => 1
+                ]);
+            } else {
+                $power->update([
+                    'sensor5' => 0
+                ]);
+            }
+        }
+        if (isset($request->sensor6)) {
+            if ($power->sensor6 === 0) {
+                $power->update([
+                    'sensor6' => 1
+                ]);
+            } else {
+                $power->update([
+                    'sensor6' => 0
+                ]);
+            }
+        }
+        return redirect()->route('power_index')->with('success','status o\'zgartirildi!');
     }
+
     public function power_index(){
         $powers = Power::first();
         return view('power')->with('powers',$powers);
