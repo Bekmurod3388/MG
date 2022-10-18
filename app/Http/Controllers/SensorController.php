@@ -22,12 +22,14 @@ class SensorController extends Controller
      */
     public function index()
     {
-        $sensor1 = Sensor1::first();
-        $sensor2 = Sensor2::first();
-        $sensor3 = Sensor3::first();
-        $sensor4 = Sensor4::first();
-        $sensor5 = Sensor5::first();
-        $sensor6 = Sensor6::first();
+        $sensor1 = Sensor1::all()->sum('value');
+        $sensor2 = Sensor2::all()->sum('value');
+        dd($sensor2);
+
+        $sensor3 = Sensor3::all();
+        $sensor4 = Sensor4::all();
+        $sensor5 = Sensor5::all();
+        $sensor6 = Sensor6::all();
         return view('welcome',[
             'sensor1'=>$sensor1,
             'sensor2'=>$sensor2,
