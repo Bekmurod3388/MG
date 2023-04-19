@@ -9,4 +9,6 @@ class Data extends Model
 {
     use HasFactory;
     protected $fillable=['pi_id','device_id','controller','temperature','humidity','motion','cmk','smoke','gas','button'];
+
+    protected $table = 'sensor_datas';
 }

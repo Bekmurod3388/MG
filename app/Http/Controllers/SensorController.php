@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Data;
 use App\Models\Dish;
 use App\Models\Power;
 use App\Models\Sensor;
@@ -175,7 +176,8 @@ class SensorController extends Controller
     }
 
     public function power_index(){
-        $powers = Power::first();
+        $objects = Data::pluck('object')->toArray();
+        dd($objects);
         return view('power')->with('powers',$powers);
     }
 }

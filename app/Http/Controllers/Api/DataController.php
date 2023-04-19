@@ -10,5 +10,6 @@ class DataController extends Controller
 {
     public function store(Request $request){
         Data::create($request->all());
+        return response()->json('success',201);
     }
 }

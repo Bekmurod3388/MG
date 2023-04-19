@@ -46,6 +46,12 @@
                 <span>Power</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('data.index')}}">
+                <i class="far fa-fw fa-window-maximize"></i>
+                <span>Datas</span>
+            </a>
+        </li>
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">

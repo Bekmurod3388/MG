@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\SensorController::class,'index'])->name('welcome');
 Route::get('/power/', [\App\Http\Controllers\SensorController::class,'power_index'])->name('power_index');
 Route::match(['put', 'patch'],'/power/status/{power}',[\App\Http\Controllers\SensorController::class,'power'])->name('power');
+Route::resource('/data',\App\Http\Controllers\DataController::class);

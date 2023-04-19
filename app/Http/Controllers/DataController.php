@@ -9,6 +9,6 @@ class DataController extends Controller
 {
     public function index(){
         $datas = Data::all();
-        return view('data',['datas'=>$datas]);
+        return view('data.index',['datas'=>$datas]);
     }
 }
